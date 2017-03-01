@@ -9,4 +9,4 @@ Team members:
 + Xia, Congying
 + Zhu, Fan
 
-We are using [this](https://www.kaggle.com/c/transfer-learning-on-stack-exchange-tags/discussion) Kaggle Competition as our project topic.
+We are using [this](https://www.kaggle.com/c/transfer-learning-on-stack-exchange-tags/discussion，"stack exchange") Kaggle Competition as our project topic.
