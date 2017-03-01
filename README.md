@@ -3,6 +3,7 @@
 This is for UIC CS412 course project.
 
 Team members:
++ _, Ellen
 + Huang, He
 + Liu, Ye
 + Sun, Lichao
