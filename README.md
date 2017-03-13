@@ -2,7 +2,11 @@
 
 This is for UIC CS412 course project.
 
-##Team members:
+## Team Name: 
+
+AllEatable
+
+##Team members (Foodies):
 
 + Huang, He
 + Liu, Ye
