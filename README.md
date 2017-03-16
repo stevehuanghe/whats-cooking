@@ -44,8 +44,10 @@ We are using [this](https://www.kaggle.com/c/whats-cooking) Kaggle Competition a
 	1.reduce V-dimensional vectors to 2- or 3- dimensional vectors
 	2. Methods:
 		1) PCA
-		2) t-SNE (see the example [here](https://www.oreilly.com/learning/an-illustrated-introduction-to-the-t-sne-algorithm))		
+		2) t-SNE		
 		
+[t-SNE example](https://www.oreilly.com/learning/an-illustrated-introduction-to-the-t-sne-algorithm)
+
 ## Contributions:
 	1. Using many traditional ML techniques
 	2. Compare the performance of each used technique
