@@ -6,7 +6,7 @@ This is for UIC CS412 course project.
 
 AllEatable
 
-##Team members (Foodies):
+## Team members (Foodies):
 
 + Huang, He
 + Liu, Ye
