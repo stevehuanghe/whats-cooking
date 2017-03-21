@@ -21,8 +21,8 @@ We are using [this](https://www.kaggle.com/c/whats-cooking) Kaggle Competition a
 ## Important Deadlines:
 
 
-	Mar 16, proposal due <-- Up-coming
-	Apr 4, progress report due
+	Mar 16, proposal due --DONE  	
+	Apr 4, progress report due <-- Up-coming	
 	Apr 25: presentations
 	Apr 27, presentations, final report due
 
