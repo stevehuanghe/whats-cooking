@@ -21,6 +21,15 @@ class DataManager(object):
     
     '''
     turn data into Bag-of-Words vectors and labels into one-hot vectors
+    input:
+        - train_data: training data in json 
+        - test_data: testing data in json
+    output:
+        - train_data_vec: training data, bag-of-words vector
+        - train_label_vec: training data's labels, one-hot vector
+        - test_data_vec: testing data, bag-of-words vector
+        - vocab: vocabulary, a list of all ingredients
+        - label_set; a list of all possilbe labels (20)
     '''
     def process_data(self,train_data,test_data):
         print 'building vocabulary...'
