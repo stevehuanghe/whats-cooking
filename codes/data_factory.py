@@ -73,16 +73,14 @@ class DataManager(object):
     def __to_BoW(self,data,key,vocab):
         num_data = len(data)
         num_vocab = len(vocab)
-        data_vec = []
+        data_vec = np.zeros((num_data,num_vocab),dtype=int)
         for i in range(num_data):
-            vec = np.zeros(num_vocab,dtype=int)
             items = data[i][key]
             if type(items) != type(list()):
-                vec[vocab.index(items)] = 1
+                data_vec[i,vocab.index(items)] = 1
             else:
                 for item in items:
-                    vec[vocab.index(item)] = 1
-            data_vec.append(vec)
+                    data_vec[i,vocab.index(item)] = 1
         return data_vec
         
     
