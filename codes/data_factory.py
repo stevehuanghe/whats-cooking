@@ -5,6 +5,7 @@
 import os
 import numpy as np
 import json
+from sklearn.feature_extraction.text import TfidfVectorizer,TfidfTransformer
 
 class DataManager(object):
     '''
@@ -24,22 +25,27 @@ class DataManager(object):
     input:
         - train_data: training data in json 
         - test_data: testing data in json
+        - tf_idf: bool type, set True to use tf-idf, set False to use BoW
     output:
         - train_data_vec: training data, bag-of-words vector
         - train_label_vec: training data's labels, one-hot vector
         - test_data_vec: testing data, bag-of-words vector
         - vocab: vocabulary, a list of all ingredients
-        - label_set; a list of all possilbe labels (20)
+        - label_set: a list of all possilbe labels (20)
     '''
-    def process_data(self,train_data,test_data):
+    def process_data(self,train_data,test_data,tf_idf = True):
         print 'building vocabulary...'
         vocab = self.__build_vocab(train_data,test_data)
         print 'building label set...'
         label_set = self.__build_labels(train_data)
+
         print 'processing train data...'
         train_data_vec = self.__to_BoW(train_data,u'ingredients',vocab)
         print 'processing test data...'
         test_data_vec = self.__to_BoW(test_data,u'ingredients',vocab)
+        if tf_idf == True:
+            print 'calculating tf-idf...'
+            train_data_vec,test_data_vec = self.tf_idf_from_BoW(train_data_vec,test_data_vec)
         print 'processing labels...'
         train_label_vec = self.__to_BoW(train_data,u'cuisine',label_set)
         print 'processing done'
@@ -91,15 +97,20 @@ class DataManager(object):
                 for item in items:
                     data_vec[i,vocab.index(item)] = 1
         return data_vec
-        
+    
+    def tf_idf_from_BoW(self,train_data,test_data):
+        transformer = TfidfTransformer()
+        transformer.fit(train_data)
+        return transformer.transform(train_data).todense(),transformer.transform(test_data).todense()
     
 def main():
     trainPath = '../data/train.json'
     testPath = '../data/test.json'
     dm = DataManager()
     train_data, test_data = dm.load_data(trainPath,testPath)
-    train_data_vec, train_label_vec, test_data_vec, vocabulary, label_set = dm.process_data(train_data,test_data)
-
+    train_data_vec, train_label_vec, test_data_vec, vocabulary, label_set = dm.process_data(train_data,test_data,tf_idf=False)
+    train_data_vec,_ = dm.tf_idf_from_BoW(train_data_vec,test_data_vec)
+    print train_data_vec.shape
 
 if __name__ == '__main__':
     main()
