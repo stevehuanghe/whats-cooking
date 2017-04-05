@@ -1,0 +1,7 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\textbf{Latent Dirichlet Allocation (LDA)}The Latent Dirichlet allocation(LDA) is an example of a topic model. Each document may be viewed as a mixture of various topics where each document is considered to have a set of topics that are assigned to it via LDA. Specifically, in our experiment, we set each cuisine is a document and the ingredients inside of each cuisine regarded as words in the document. By using the LDA we can get the probability for document belong to each topics. Thus we can make a decision about which type of cuisine this dish is. And simultaneously, we can get the main topic words for each topic, which contains the highest percent relevance to the related topic. 
+
+So far, we have already got the probability for document belong to each topics and the main topic words for each topic. In the next step, we will focus on the visualization part. Beyond that, we want to learn the name of each topic. Since the LDA is unsupervised learning problem, we can only learn which document belongs to which topic; however, we cannot get the topic name, in our experiment, that is the cuisine name. Therefore we plan to put the topic into the other classification method to learn the name of each topic. 
+\end{document}
