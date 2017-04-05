@@ -27,7 +27,7 @@ MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
 
 print('model accuracy...')
 scores = cross_val_score(clf, train_data,tLabel, cv=5)
-print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+print("Accuracy: %0.4f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 print('predict...')
 clf.fit(train_data,tLabel)
