@@ -22,9 +22,9 @@ We are using [this](https://www.kaggle.com/c/whats-cooking) Kaggle Competition a
 
 
 	Mar 16, proposal due --DONE  	
-	Apr 4, progress report due <-- Up-coming	
+	Apr 4, progress report due <-- DONE	
 	Apr 25: presentations
-	Apr 27, presentations, final report due
+	Apr 27, presentations, final report due <-- Coming
 
 
 ## Problem definition: 
