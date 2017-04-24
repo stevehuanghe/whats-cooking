@@ -1,0 +1,8 @@
+Linear SVC
+
+Test 3 Parameters in LinearSVC:
+
+Best Train Acc: 0.940383407 with C = 2
+Best Test Acc: 0.773824491 with C = 0.5
+
+Other Paramters do not significantly affect the final results
